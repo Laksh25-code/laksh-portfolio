@@ -6,7 +6,7 @@ function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1 }}
-      className="fixed top-6 left-1/2 z-[999] -translate-x-1/2"
+      className="fixed left-1/2 top-6 z-[999] hidden -translate-x-1/2 md:block"
     >
 
       {/* NAV CONTAINER */}
