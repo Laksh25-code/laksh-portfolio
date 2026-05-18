@@ -12,7 +12,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-[#081120] px-16 py-32"
+      className="relative overflow-hidden bg-[#081120] px-6 py-20 md:px-16 md:py-32"
     >
 
       {/* GRAIN TEXTURE */}
@@ -33,7 +33,7 @@ function Projects() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="absolute left-10 top-10 font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04]"
+        className="absolute left-10 top-10 hidden font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04] md:block"
       >
         PROJECTS
       </motion.h1>
@@ -46,18 +46,18 @@ function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="mb-24"
+          className="mb-16 md:mb-24"
         >
 
-          <p className="mb-6 text-sm uppercase tracking-[8px] text-zinc-400">
+          <p className="mb-4 text-xs uppercase tracking-[5px] text-zinc-400 sm:text-sm sm:tracking-[8px]">
             Selected Works
           </p>
 
-          <h2 className="font-['Bebas_Neue'] text-[140px] leading-none text-white">
+          <h2 className="font-['Bebas_Neue'] leading-none text-white">
 
             Featured
 
-            <span className="block text-blue-400">
+            <span className="block text-[70px] text-blue-400 sm:text-[90px] md:text-[140px]">
               Projects
             </span>
 
@@ -66,7 +66,7 @@ function Projects() {
         </motion.div>
 
         {/* WEB PROJECTS */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <div className="grid grid-cols-2 gap-4 md:gap-8 lg:grid-cols-2">
 
           {webProjects.map((project, index) => (
 
@@ -82,7 +82,7 @@ function Projects() {
               whileHover={{
                 y: -12,
               }}
-              className="group relative overflow-hidden rounded-[40px] border border-white/5 bg-black/30 p-6 shadow-2xl backdrop-blur-md"
+              className="group relative overflow-hidden rounded-[20px] border border-white/5 bg-black/30 p-3 shadow-2xl backdrop-blur-md md:rounded-[40px] md:p-6"
             >
 
               {/* BLUE GLOW */}
@@ -109,7 +109,7 @@ function Projects() {
                   }}
                   src={project.image}
                   alt={project.title}
-                  className="h-[320px] w-full object-cover"
+                  className="h-[140px] w-full object-cover md:h-[320px]"
                 />
 
               </div>
@@ -117,11 +117,11 @@ function Projects() {
               {/* CONTENT */}
               <div className="relative z-10 mt-8">
 
-                <h3 className="font-['Bebas_Neue'] text-5xl leading-none text-white">
+                <h3 className="font-['Bebas_Neue'] text-2xl leading-none text-white md:text-5xl">
                   {project.title}
                 </h3>
 
-                <p className="mt-4 leading-relaxed text-zinc-400">
+                <p className="mt-3 text-sm leading-relaxed text-zinc-400 md:text-base">
                   {project.description}
                 </p>
 
@@ -135,7 +135,7 @@ function Projects() {
                       whileHover={{
                         scale: 1.08,
                       }}
-                      className="rounded-full border border-white/5 bg-black/40 px-4 py-2 text-xs uppercase tracking-[3px] text-white transition duration-300 hover:border-blue-400/40 hover:bg-blue-500/10"
+                      className="rounded-full border border-white/5 bg-black/40 px-3 py-1 text-[9px] uppercase tracking-[2px] text-white transition duration-300 hover:border-blue-400/40 hover:bg-blue-500/10 md:px-4 md:py-2 md:text-xs"
                     >
                       {tech}
                     </motion.span>
@@ -153,7 +153,7 @@ function Projects() {
         </div>
 
         {/* UIUX SECTION */}
-        <div className="relative mt-40">
+        <div className="relative mt-24 md:mt-40">
 
           {/* BLUE GLOW */}
           <motion.div
@@ -164,7 +164,7 @@ function Projects() {
               repeat: Infinity,
               duration: 5,
             }}
-            className="absolute right-20 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-3xl"
+            className="absolute right-0 top-20 h-[250px] w-[250px] rounded-full bg-blue-500/20 blur-3xl md:h-[500px] md:w-[500px]"
           />
 
           <motion.p
@@ -182,19 +182,19 @@ function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="font-['Bebas_Neue'] text-[120px] leading-none text-white"
+            className="font-['Bebas_Neue'] leading-none text-white"
           >
 
             Creative
 
-            <span className="block text-blue-400">
+            <span className="block text-[70px] text-blue-400 sm:text-[90px] md:text-[120px]">
               Interfaces
             </span>
 
           </motion.h2>
 
           {/* UIUX GRID */}
-          <div className="relative z-10 mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative z-10 mt-12 grid grid-cols-2 gap-4 md:mt-20 md:gap-6 lg:grid-cols-4">
 
             {uiuxProjects.map((image, index) => (
 
@@ -210,7 +210,7 @@ function Projects() {
                 whileHover={{
                   y: -10,
                 }}
-                className="group overflow-hidden rounded-[30px] border border-white/5 bg-black/30 shadow-2xl backdrop-blur-md"
+                className="group overflow-hidden rounded-[18px] border border-white/5 bg-black/30 shadow-2xl backdrop-blur-md md:rounded-[30px]"
               >
 
                 <motion.img
@@ -222,7 +222,7 @@ function Projects() {
                   }}
                   src={image}
                   alt=""
-                  className="h-[320px] w-full object-cover"
+                  className="h-[180px] w-full object-cover md:h-[320px]"
                 />
 
               </motion.div>
