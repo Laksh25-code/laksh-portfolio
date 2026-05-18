@@ -1,0 +1,242 @@
+import grainTexture from "../assets/grain-texture.png"
+
+import {
+  webProjects,
+  uiuxProjects,
+} from "../data/projects"
+
+import { motion } from "framer-motion"
+
+function Projects() {
+
+  return (
+    <section
+      id="projects"
+      className="relative overflow-hidden bg-[#081120] px-16 py-32"
+    >
+
+      {/* GRAIN TEXTURE */}
+      <div
+        className="absolute inset-0 opacity-[0.05] mix-blend-screen"
+        style={{
+          backgroundImage: `url(${grainTexture})`,
+          backgroundSize: "cover",
+        }}
+      />
+
+      {/* BLACK OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-40"></div>
+
+      {/* BACKGROUND TEXT */}
+      <motion.h1
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        viewport={{ once: true }}
+        className="absolute left-10 top-10 font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04]"
+      >
+        PROJECTS
+      </motion.h1>
+
+      <div className="relative z-10">
+
+        {/* SECTION TITLE */}
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="mb-24"
+        >
+
+          <p className="mb-6 text-sm uppercase tracking-[8px] text-zinc-400">
+            Selected Works
+          </p>
+
+          <h2 className="font-['Bebas_Neue'] text-[140px] leading-none text-white">
+
+            Featured
+
+            <span className="block text-blue-400">
+              Projects
+            </span>
+
+          </h2>
+
+        </motion.div>
+
+        {/* WEB PROJECTS */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+
+          {webProjects.map((project, index) => (
+
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+              }}
+              viewport={{ once: true }}
+              whileHover={{
+                y: -12,
+              }}
+              className="group relative overflow-hidden rounded-[40px] border border-white/5 bg-black/30 p-6 shadow-2xl backdrop-blur-md"
+            >
+
+              {/* BLUE GLOW */}
+              <motion.div
+                animate={{
+                  opacity: [0.3, 0.6, 0.3],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 4,
+                }}
+                className="absolute -right-10 -top-10 h-[250px] w-[250px] rounded-full bg-blue-500/20 blur-3xl"
+              />
+
+              {/* IMAGE */}
+              <div className="overflow-hidden rounded-[30px]">
+
+                <motion.img
+                  whileHover={{
+                    scale: 1.08,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                  }}
+                  src={project.image}
+                  alt={project.title}
+                  className="h-[320px] w-full object-cover"
+                />
+
+              </div>
+
+              {/* CONTENT */}
+              <div className="relative z-10 mt-8">
+
+                <h3 className="font-['Bebas_Neue'] text-5xl leading-none text-white">
+                  {project.title}
+                </h3>
+
+                <p className="mt-4 leading-relaxed text-zinc-400">
+                  {project.description}
+                </p>
+
+                {/* TECH STACK */}
+                <div className="mt-6 flex flex-wrap gap-3">
+
+                  {project.tech.map((tech, i) => (
+
+                    <motion.span
+                      key={i}
+                      whileHover={{
+                        scale: 1.08,
+                      }}
+                      className="rounded-full border border-white/5 bg-black/40 px-4 py-2 text-xs uppercase tracking-[3px] text-white transition duration-300 hover:border-blue-400/40 hover:bg-blue-500/10"
+                    >
+                      {tech}
+                    </motion.span>
+
+                  ))}
+
+                </div>
+
+              </div>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+        {/* UIUX SECTION */}
+        <div className="relative mt-40">
+
+          {/* BLUE GLOW */}
+          <motion.div
+            animate={{
+              scale: [1, 1.08, 1],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 5,
+            }}
+            className="absolute right-20 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-3xl"
+          />
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-6 text-sm uppercase tracking-[8px] text-zinc-400"
+          >
+            UI / UX Designs
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="font-['Bebas_Neue'] text-[120px] leading-none text-white"
+          >
+
+            Creative
+
+            <span className="block text-blue-400">
+              Interfaces
+            </span>
+
+          </motion.h2>
+
+          {/* UIUX GRID */}
+          <div className="relative z-10 mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+            {uiuxProjects.map((image, index) => (
+
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="group overflow-hidden rounded-[30px] border border-white/5 bg-black/30 shadow-2xl backdrop-blur-md"
+              >
+
+                <motion.img
+                  whileHover={{
+                    scale: 1.08,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                  }}
+                  src={image}
+                  alt=""
+                  className="h-[320px] w-full object-cover"
+                />
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  )
+}
+
+export default Projects
