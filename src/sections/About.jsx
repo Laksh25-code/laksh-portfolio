@@ -17,7 +17,7 @@ function About() {
   return (
     <section
   id="about"
-  className="relative overflow-hidden bg-[#081120] px-16 py-32"
+  className="relative overflow-hidden bg-[#081120] px-6 py-20 md:px-16 md:py-32"
 >
 
       {/* GRAIN TEXTURE */}
@@ -38,13 +38,13 @@ function About() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="absolute right-0 top-10 font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04]"
+        className="absolute right-0 top-10 hidden font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04] md:block"
       >
         ABOUT
       </motion.h1>
 
       {/* MAIN CONTAINER */}
-      <div className="relative z-10 grid grid-cols-1 items-center gap-20 lg:grid-cols-2">
+      <div className="relative z-10 grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
         <motion.div
@@ -64,11 +64,11 @@ function About() {
               repeat: Infinity,
               duration: 5,
             }}
-            className="absolute h-[450px] w-[450px] rounded-full bg-blue-400/20 blur-3xl"
+            className="absolute h-[250px] w-[250px] rounded-full bg-blue-400/20 blur-3xl sm:h-[350px] sm:w-[350px] md:h-[450px] md:w-[450px]"
           />
 
           {/* OUTER SHADOW */}
-          <div className="absolute h-[620px] w-[450px] rounded-[40px] bg-black/40 blur-2xl"></div>
+          <div className="absolute h-[340px] w-[260px] rounded-[30px] bg-black/40 blur-2xl sm:h-[500px] sm:w-[360px] md:h-[620px] md:w-[450px]"></div>
 
           {/* GLASS FRAME */}
           <motion.div
@@ -82,7 +82,7 @@ function About() {
             whileHover={{
               scale: 1.02,
             }}
-            className="relative rounded-[40px] border border-white/5 bg-black/30 p-4 shadow-2xl backdrop-blur-md"
+            className="relative w-full max-w-[280px] rounded-[30px] border border-white/5 bg-black/30 p-4 shadow-2xl backdrop-blur-md sm:max-w-[380px] md:max-w-[450px]"
           >
 
             {/* TOP LABEL */}
@@ -97,7 +97,7 @@ function About() {
               }}
               src={aboutImage}
               alt="About"
-              className="relative z-10 h-[650px] object-contain grayscale"
+              className="relative z-10 h-[320px] object-contain grayscale sm:h-[450px] md:h-[650px]"
             />
 
           </motion.div>
@@ -110,6 +110,7 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
+          className="text-center lg:text-left"
         >
 
           <motion.p
@@ -117,20 +118,20 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
-            className="mb-6 text-sm uppercase tracking-[8px] text-zinc-400"
+            className="mb-4 text-xs uppercase tracking-[5px] text-zinc-400 sm:text-sm sm:tracking-[8px]"
           >
             About Me
           </motion.p>
 
           {/* HEADING */}
-          <h2 className="font-['Bebas_Neue'] text-[120px] leading-none text-white">
+          <h2 className="font-['Bebas_Neue'] leading-none text-white">
 
             <motion.span
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="block"
+              className="block text-[70px] sm:text-[90px] md:text-[120px]"
             >
               Creative
             </motion.span>
@@ -140,7 +141,7 @@ function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
-              className="block text-blue-400"
+              className="block text-[70px] text-blue-400 sm:text-[90px] md:text-[120px]"
             >
               Developer
             </motion.span>
@@ -153,7 +154,7 @@ function About() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
-            className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-300"
+            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg lg:mx-0"
           >
             I'm Laksh Patil, a frontend developer and engineering student
             passionate about building modern web experiences with clean UI,
@@ -165,7 +166,7 @@ function About() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
             viewport={{ once: true }}
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400"
+            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg lg:mx-0"
           >
             I enjoy creating visually engaging websites using React,
             Tailwind CSS, and modern frontend technologies while also
@@ -178,7 +179,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
             viewport={{ once: true }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start"
           >
 
             {skills.map((skill, index) => (
@@ -188,7 +189,7 @@ function About() {
                 whileHover={{
                   scale: 1.08,
                 }}
-                className="rounded-full border border-white/5 bg-black/30 px-6 py-3 text-sm uppercase tracking-[3px] text-white transition duration-300 hover:border-blue-400/40 hover:bg-blue-500/10"
+                className="rounded-full border border-white/5 bg-black/30 px-4 py-2 text-[10px] uppercase tracking-[2px] text-white transition duration-300 hover:border-blue-400/40 hover:bg-blue-500/10 sm:px-6 sm:py-3 sm:text-sm sm:tracking-[3px]"
               >
                 {skill}
               </motion.span>
