@@ -1,20 +1,15 @@
-import grainTexture from "../assets/grain-texture.png"
+import grainTexture from "../assets/grain-texture.png";
 
-import {
-  webProjects,
-  uiuxProjects,
-} from "../data/projects"
+import { webProjects, uiuxProjects } from "../data/projects";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 function Projects() {
-
   return (
     <section
       id="projects"
       className="relative overflow-hidden bg-[#081120] px-6 py-20 md:px-16 md:py-32"
     >
-
       {/* GRAIN TEXTURE */}
       <div
         className="absolute inset-0 opacity-[0.05] mix-blend-screen"
@@ -39,7 +34,6 @@ function Projects() {
       </motion.h1>
 
       <div className="relative z-10">
-
         {/* SECTION TITLE */}
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -48,28 +42,24 @@ function Projects() {
           viewport={{ once: true }}
           className="mb-16 md:mb-24"
         >
-
           <p className="mb-4 text-xs uppercase tracking-[5px] text-zinc-400 sm:text-sm sm:tracking-[8px]">
             Selected Works
           </p>
 
           <h2 className="font-['Bebas_Neue'] leading-none text-white">
-
-            Featured
-
-            <span className="block text-[70px] text-blue-400 sm:text-[90px] md:text-[140px]">
-              Projects
+            <span className="block text-[60px] sm:text-[90px] md:text-[130px] lg:text-[150px]">
+              Featured
             </span>
 
+            <span className="block text-[60px] text-blue-400 sm:text-[90px] md:text-[130px] lg:text-[150px]">
+              Projects
+            </span>
           </h2>
-
         </motion.div>
 
         {/* WEB PROJECTS */}
         <div className="grid grid-cols-2 gap-4 md:gap-8 lg:grid-cols-2">
-
           {webProjects.map((project, index) => (
-
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 80 }}
@@ -84,7 +74,6 @@ function Projects() {
               }}
               className="group relative overflow-hidden rounded-[20px] border border-white/5 bg-black/30 p-3 shadow-2xl backdrop-blur-md md:rounded-[40px] md:p-6"
             >
-
               {/* BLUE GLOW */}
               <motion.div
                 animate={{
@@ -99,7 +88,6 @@ function Projects() {
 
               {/* IMAGE */}
               <div className="overflow-hidden rounded-[30px]">
-
                 <motion.img
                   whileHover={{
                     scale: 1.08,
@@ -111,12 +99,10 @@ function Projects() {
                   alt={project.title}
                   className="h-[140px] w-full object-cover md:h-[320px]"
                 />
-
               </div>
 
               {/* CONTENT */}
               <div className="relative z-10 mt-8">
-
                 <h3 className="font-['Bebas_Neue'] text-2xl leading-none text-white md:text-5xl">
                   {project.title}
                 </h3>
@@ -127,9 +113,7 @@ function Projects() {
 
                 {/* TECH STACK */}
                 <div className="mt-6 flex flex-wrap gap-3">
-
                   {project.tech.map((tech, i) => (
-
                     <motion.span
                       key={i}
                       whileHover={{
@@ -139,22 +123,15 @@ function Projects() {
                     >
                       {tech}
                     </motion.span>
-
                   ))}
-
                 </div>
-
               </div>
-
             </motion.div>
-
           ))}
-
         </div>
 
         {/* UIUX SECTION */}
         <div className="relative mt-24 md:mt-40">
-
           {/* BLUE GLOW */}
           <motion.div
             animate={{
@@ -184,20 +161,18 @@ function Projects() {
             viewport={{ once: true }}
             className="font-['Bebas_Neue'] leading-none text-white"
           >
-
-            Creative
-
-            <span className="block text-[70px] text-blue-400 sm:text-[90px] md:text-[120px]">
-              Interfaces
+            <span className="block text-[60px] sm:text-[90px] md:text-[130px] lg:text-[150px]">
+              Creative
             </span>
 
+            <span className="block text-[60px] text-blue-400 sm:text-[90px] md:text-[130px] lg:text-[150px]">
+              Interfaces
+            </span>
           </motion.h2>
 
           {/* UIUX GRID */}
           <div className="relative z-10 mt-12 grid grid-cols-2 gap-4 md:mt-20 md:gap-6 lg:grid-cols-4">
-
             {uiuxProjects.map((image, index) => (
-
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 60 }}
@@ -212,7 +187,6 @@ function Projects() {
                 }}
                 className="group overflow-hidden rounded-[18px] border border-white/5 bg-black/30 shadow-2xl backdrop-blur-md md:rounded-[30px]"
               >
-
                 <motion.img
                   whileHover={{
                     scale: 1.08,
@@ -224,19 +198,13 @@ function Projects() {
                   alt=""
                   className="h-[180px] w-full object-cover md:h-[320px]"
                 />
-
               </motion.div>
-
             ))}
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

@@ -1,19 +1,43 @@
 import grainTexture from "../assets/grain-texture.png"
 
-import {
-  webProjects,
-  uiuxProjects,
-} from "../data/projects"
-
 import { motion } from "framer-motion"
 
-function Projects() {
+function Journey() {
+
+  const skills = [
+    "React",
+    "Tailwind CSS",
+    "JavaScript",
+    "Frontend Development",
+    "UI / UX Design",
+    "Figma",
+    "GitHub",
+    "Web Development",
+    "Responsive Design",
+  ]
+
+  const timeline = [
+    {
+      title: "Started Web Development",
+      description:
+        "Learned HTML, CSS, and JavaScript while building beginner frontend projects and landing pages.",
+    },
+
+    {
+      title: "Explored React & UI/UX",
+      description:
+        "Started building modern React applications and designing creative user interfaces with cinematic aesthetics.",
+    },
+
+    {
+      title: "Final Year Project Development",
+      description:
+        "Working on AI/ML-based healthcare solutions combined with modern web development technologies.",
+    },
+  ]
 
   return (
-    <section
-      id="projects"
-      className="relative overflow-hidden bg-[#081120] px-6 py-20 md:px-16 md:py-32"
-    >
+    <section className="relative overflow-hidden bg-black px-6 py-20 md:px-16 md:py-32">
 
       {/* GRAIN TEXTURE */}
       <div
@@ -24,136 +48,90 @@ function Projects() {
         }}
       />
 
-      {/* BLACK OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-40"></div>
-
       {/* BACKGROUND TEXT */}
       <motion.h1
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="absolute left-10 top-10 hidden font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04] md:block"
+        className="absolute right-0 top-10 hidden font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04] md:block"
       >
-        PROJECTS
+        JOURNEY
       </motion.h1>
 
-      <div className="relative z-10">
+      {/* MAIN CONTAINER */}
+      <div className="relative z-10 grid grid-cols-1 gap-14 lg:grid-cols-2">
 
-        {/* SECTION TITLE */}
+        {/* LEFT SIDE */}
         <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="mb-16 md:mb-24"
         >
 
-          <p className="mb-4 text-xs uppercase tracking-[5px] text-zinc-400 sm:text-sm sm:tracking-[8px]">
-            Selected Works
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mb-4 text-xs uppercase tracking-[5px] text-zinc-400 sm:text-sm sm:tracking-[8px]"
+          >
+            Coding Journey
+          </motion.p>
 
-          <h2 className="font-['Bebas_Neue'] leading-none text-white text-[70px] sm:text-[90px] md:text-[140px]">
+          <h2 className="font-['Bebas_Neue'] leading-none text-white">
 
-            Featured
+            <motion.span
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="block text-[70px] sm:text-[90px] md:text-[130px]"
+            >
+              Creative
+            </motion.span>
 
-            <span className="block text-[70px] text-blue-400 sm:text-[90px] md:text-[140px]">
-              Projects
-            </span>
+            <motion.span
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="block text-[70px] text-blue-500 sm:text-[90px] md:text-[130px]"
+            >
+              Developer
+            </motion.span>
 
           </h2>
 
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg"
+          >
+            My journey started with frontend development and gradually
+            evolved into building cinematic interfaces, modern web
+            experiences, and creative UI/UX projects.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            viewport={{ once: true }}
+            className="mt-5 max-w-xl text-base leading-relaxed text-zinc-500 sm:text-lg"
+          >
+            I continuously explore new technologies, improve interaction
+            design, and create projects that combine aesthetics with
+            functionality.
+          </motion.p>
+
         </motion.div>
 
-        {/* WEB PROJECTS */}
-        <div className="grid grid-cols-2 gap-4 md:gap-8 lg:grid-cols-2">
-
-          {webProjects.map((project, index) => (
-
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.2,
-              }}
-              viewport={{ once: true }}
-              whileHover={{
-                y: -12,
-              }}
-              className="group relative overflow-hidden rounded-[20px] border border-white/5 bg-black/30 p-3 shadow-2xl backdrop-blur-md md:rounded-[40px] md:p-6"
-            >
-
-              {/* BLUE GLOW */}
-              <motion.div
-                animate={{
-                  opacity: [0.3, 0.6, 0.3],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 4,
-                }}
-                className="absolute -right-10 -top-10 h-[250px] w-[250px] rounded-full bg-blue-500/20 blur-3xl"
-              />
-
-              {/* IMAGE */}
-              <div className="overflow-hidden rounded-[20px] md:rounded-[30px]">
-
-                <motion.img
-                  whileHover={{
-                    scale: 1.08,
-                  }}
-                  transition={{
-                    duration: 0.6,
-                  }}
-                  src={project.image}
-                  alt={project.title}
-                  className="h-[140px] w-full object-cover md:h-[320px]"
-                />
-
-              </div>
-
-              {/* CONTENT */}
-              <div className="relative z-10 mt-4 md:mt-8">
-
-                <h3 className="font-['Bebas_Neue'] text-xl leading-none text-white md:text-5xl">
-                  {project.title}
-                </h3>
-
-                <p className="mt-2 text-xs leading-relaxed text-zinc-400 md:mt-4 md:text-base">
-                  {project.description}
-                </p>
-
-                {/* TECH STACK */}
-                <div className="mt-4 flex flex-wrap gap-2 md:mt-6 md:gap-3">
-
-                  {project.tech.map((tech, i) => (
-
-                    <motion.span
-                      key={i}
-                      whileHover={{
-                        scale: 1.08,
-                      }}
-                      className="rounded-full border border-white/5 bg-black/40 px-2 py-1 text-[8px] uppercase tracking-[1px] text-white transition duration-300 hover:border-blue-400/40 hover:bg-blue-500/10 md:px-4 md:py-2 md:text-xs md:tracking-[3px]"
-                    >
-                      {tech}
-                    </motion.span>
-
-                  ))}
-
-                </div>
-
-              </div>
-
-            </motion.div>
-
-          ))}
-
-        </div>
-
-        {/* UIUX SECTION */}
-        <div className="relative mt-24 md:mt-40">
+        {/* RIGHT SIDE */}
+        <div className="relative flex flex-wrap justify-center gap-3 md:gap-6">
 
           {/* BLUE GLOW */}
           <motion.div
@@ -164,72 +142,102 @@ function Projects() {
               repeat: Infinity,
               duration: 5,
             }}
-            className="absolute right-0 top-20 h-[250px] w-[250px] rounded-full bg-blue-500/20 blur-3xl md:h-[500px] md:w-[500px]"
+            className="absolute left-10 top-10 h-[220px] w-[220px] rounded-full bg-blue-500/20 blur-3xl md:left-20 md:top-20 md:h-[500px] md:w-[500px]"
           />
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mb-4 text-xs uppercase tracking-[5px] text-zinc-400 sm:text-sm sm:tracking-[8px]"
-          >
-            UI / UX Designs
-          </motion.p>
+          {skills.map((skill, index) => (
 
-          <motion.h2
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="font-['Bebas_Neue'] leading-none text-white text-[70px] sm:text-[90px] md:text-[120px]"
-          >
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.1,
+              }}
+              viewport={{ once: true }}
+              whileHover={{
+                y: -8,
+                scale: 1.04,
+              }}
+              className="group relative overflow-hidden rounded-[18px] border border-white/5 bg-white/5 px-4 py-3 shadow-2xl backdrop-blur-md hover:border-blue-500/30 md:rounded-[30px] md:px-8 md:py-6"
+            >
 
-            Creative
+              {/* HOVER GLOW */}
+              <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-blue-500/10"></div>
+              </div>
 
-            <span className="block text-[70px] text-blue-400 sm:text-[90px] md:text-[120px]">
-              Interfaces
-            </span>
+              <h3 className="relative z-10 font-['Bebas_Neue'] text-lg tracking-wide text-white md:text-4xl">
+                {skill}
+              </h3>
 
-          </motion.h2>
+            </motion.div>
 
-          {/* UIUX GRID */}
-          <div className="relative z-10 mt-12 grid grid-cols-2 gap-4 md:mt-20 md:gap-6 lg:grid-cols-4">
+          ))}
 
-            {uiuxProjects.map((image, index) => (
+        </div>
 
+      </div>
+
+      {/* TIMELINE */}
+      <div className="relative z-10 mt-24 md:mt-40">
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-6 text-sm uppercase tracking-[8px] text-zinc-400"
+        >
+          Growth Timeline
+        </motion.p>
+
+        <div className="space-y-14">
+
+          {timeline.map((item, index) => (
+
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+              }}
+              viewport={{ once: true }}
+              className="flex items-start gap-4 md:gap-8"
+            >
+
+              {/* DOT */}
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{
+                  scale: [1, 1.2, 1],
+                }}
                 transition={{
-                  duration: 0.7,
-                  delay: index * 0.1,
+                  repeat: Infinity,
+                  duration: 3,
+                  delay: index * 0.5,
                 }}
-                viewport={{ once: true }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="group overflow-hidden rounded-[18px] border border-white/5 bg-black/30 shadow-2xl backdrop-blur-md md:rounded-[30px]"
-              >
+                className="mt-2 h-4 w-4 rounded-full bg-blue-500"
+              />
 
-                <motion.img
-                  whileHover={{
-                    scale: 1.08,
-                  }}
-                  transition={{
-                    duration: 0.6,
-                  }}
-                  src={image}
-                  alt=""
-                  className="h-[180px] w-full object-cover md:h-[320px]"
-                />
+              {/* CONTENT */}
+              <div>
 
-              </motion.div>
+                <h3 className="font-['Bebas_Neue'] text-2xl text-white md:text-5xl">
+                  {item.title}
+                </h3>
 
-            ))}
+                <p className="mt-2 max-w-2xl text-zinc-400">
+                  {item.description}
+                </p>
 
-          </div>
+              </div>
+
+            </motion.div>
+
+          ))}
 
         </div>
 
@@ -239,4 +247,4 @@ function Projects() {
   )
 }
 
-export default Projects
+export default Journey
