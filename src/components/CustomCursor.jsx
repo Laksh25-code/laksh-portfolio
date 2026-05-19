@@ -50,7 +50,7 @@ function CustomCursor() {
     <img
       src={cursorImage}
       alt="cursor"
-      className="pointer-events-none fixed left-0 top-0 z-[9999] w-10"
+      className="pointer-events-none fixed left-0 top-0 z-[9999] hidden w-10 md:block"
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
       }}
