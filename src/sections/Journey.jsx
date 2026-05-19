@@ -37,7 +37,7 @@ function Journey() {
   ]
 
   return (
-    <section className="relative overflow-hidden bg-black px-16 py-32">
+    <section className="relative overflow-hidden bg-black px-6 py-20 md:px-16 md:py-32">
 
       {/* GRAIN TEXTURE */}
       <div
@@ -54,13 +54,13 @@ function Journey() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="absolute right-0 top-10 font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04]"
+        className="absolute right-0 top-10 hidden font-['Bebas_Neue'] text-[300px] leading-none text-white/[0.04] md:block"
       >
         JOURNEY
       </motion.h1>
 
       {/* MAIN CONTAINER */}
-      <div className="relative z-10 grid grid-cols-1 gap-20 lg:grid-cols-2">
+      <div className="relative z-10 grid grid-cols-1 gap-14 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
         <motion.div
@@ -75,19 +75,19 @@ function Journey() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
-            className="mb-6 text-sm uppercase tracking-[8px] text-zinc-400"
+            className="mb-4 text-xs uppercase tracking-[5px] text-zinc-400 sm:text-sm sm:tracking-[8px]"
           >
             Coding Journey
           </motion.p>
 
-          <h2 className="font-['Bebas_Neue'] text-[130px] leading-none text-white">
+          <h2 className="font-['Bebas_Neue'] leading-none text-white">
 
             <motion.span
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="block"
+              className="block text-[70px] sm:text-[90px] md:text-[130px]"
             >
               Creative
             </motion.span>
@@ -97,7 +97,7 @@ function Journey() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
-              className="block text-blue-500"
+              className="block text-[70px] text-blue-500 sm:text-[90px] md:text-[130px]"
             >
               Developer
             </motion.span>
@@ -109,7 +109,7 @@ function Journey() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
-            className="mt-10 max-w-xl text-lg leading-relaxed text-zinc-400"
+            className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg"
           >
             My journey started with frontend development and gradually
             evolved into building cinematic interfaces, modern web
@@ -121,7 +121,7 @@ function Journey() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
             viewport={{ once: true }}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-500"
+            className="mt-5 max-w-xl text-base leading-relaxed text-zinc-500 sm:text-lg"
           >
             I continuously explore new technologies, improve interaction
             design, and create projects that combine aesthetics with
@@ -131,7 +131,7 @@ function Journey() {
         </motion.div>
 
         {/* RIGHT SIDE */}
-        <div className="relative flex flex-wrap content-start gap-6">
+        <div className="relative flex flex-wrap justify-center gap-3 md:gap-6">
 
           {/* BLUE GLOW */}
           <motion.div
@@ -142,7 +142,7 @@ function Journey() {
               repeat: Infinity,
               duration: 5,
             }}
-            className="absolute left-20 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-3xl"
+            className="absolute left-10 top-10 h-[220px] w-[220px] rounded-full bg-blue-500/20 blur-3xl md:left-20 md:top-20 md:h-[500px] md:w-[500px]"
           />
 
           {skills.map((skill, index) => (
@@ -160,7 +160,7 @@ function Journey() {
                 y: -8,
                 scale: 1.04,
               }}
-              className="group relative overflow-hidden rounded-[30px] border border-white/5 bg-white/5 px-8 py-6 shadow-2xl backdrop-blur-md hover:border-blue-500/30"
+              className="group relative overflow-hidden rounded-[18px] border border-white/5 bg-white/5 px-4 py-3 shadow-2xl backdrop-blur-md hover:border-blue-500/30 md:rounded-[30px] md:px-8 md:py-6"
             >
 
               {/* HOVER GLOW */}
@@ -168,7 +168,7 @@ function Journey() {
                 <div className="absolute inset-0 bg-blue-500/10"></div>
               </div>
 
-              <h3 className="relative z-10 font-['Bebas_Neue'] text-4xl tracking-wide text-white">
+              <h3 className="relative z-10 font-['Bebas_Neue'] text-lg tracking-wide text-white md:text-4xl">
                 {skill}
               </h3>
 
@@ -181,7 +181,7 @@ function Journey() {
       </div>
 
       {/* TIMELINE */}
-      <div className="relative z-10 mt-40">
+      <div className="relative z-10 mt-24 md:mt-40">
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -206,7 +206,7 @@ function Journey() {
                 delay: index * 0.2,
               }}
               viewport={{ once: true }}
-              className="flex items-start gap-8"
+              className="flex items-start gap-4 md:gap-8"
             >
 
               {/* DOT */}
@@ -225,7 +225,7 @@ function Journey() {
               {/* CONTENT */}
               <div>
 
-                <h3 className="font-['Bebas_Neue'] text-5xl text-white">
+                <h3 className="font-['Bebas_Neue'] text-2xl text-white md:text-5xl">
                   {item.title}
                 </h3>
 

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 function Navbar() {
   return (
@@ -6,12 +6,10 @@ function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1 }}
-      className="fixed left-1/2 top-6 z-[999] hidden -translate-x-1/2 md:block"
+      className="fixed left-1/2 top-6 z-[999] hidden -translate-x-1/2 lg:block"
     >
-
       {/* NAV CONTAINER */}
       <div className="flex items-center gap-10 rounded-full border border-white/10 bg-white/[0.03] px-10 py-4 backdrop-blur-xl">
-
         {/* LOGO */}
         <a
           href="#"
@@ -22,7 +20,6 @@ function Navbar() {
 
         {/* LINKS */}
         <div className="hidden items-center gap-8 md:flex">
-
           <a
             href="#about"
             className="text-sm uppercase tracking-[3px] text-zinc-300 transition duration-300 hover:text-blue-400"
@@ -50,13 +47,10 @@ function Navbar() {
           >
             Contact
           </a>
-
         </div>
-
       </div>
-
     </motion.nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
