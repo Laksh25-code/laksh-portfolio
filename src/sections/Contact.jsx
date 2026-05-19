@@ -197,10 +197,10 @@ function Contact() {
                 href="https://www.linkedin.com/in/laksh-patil-4b3136357"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-[20px] border border-white/5 bg-white/5 px-6 py-5 transition duration-300 hover:border-blue-500/30 hover:bg-blue-500/10"
+                className="group flex items-center justify-between rounded-[16px] border border-white/5 bg-white/5 px-4 py-4 transition duration-300 hover:border-blue-500/30 hover:bg-blue-500/10 md:rounded-[20px] md:px-6 md:py-5"
               >
 
-                <span className="font-['Bebas_Neue'] text-3xl text-white">
+                <span className="font-['Bebas_Neue'] text-xl text-white md:text-3xl">
                   LinkedIn
                 </span>
 
