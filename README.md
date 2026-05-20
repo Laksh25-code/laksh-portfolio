@@ -1,16 +1,86 @@
-# React + Vite
+# 🚀 Laksh Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern cinematic developer portfolio built using React, Tailwind CSS, Framer Motion, and Vite.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+🔗 https://YOUR-VERCEL-LINK.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎬 Cinematic UI Design
+- ⚡ Smooth Framer Motion Animations
+- 📱 Fully Responsive
+- 🌙 Modern Dark Theme
+- 🧊 Glassmorphism Effects
+- 📄 Resume Download
+- 🔗 GitHub & LinkedIn Integration
+- 🚀 Deployed on Vercel
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- Tailwind CSS
+- Framer Motion
+- Vite
+- JavaScript
+
+---
+
+## 📸 Preview
+
+<img width="100%" src="YOUR_SCREENSHOT_LINK"/>
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Laksh25-code/laksh-portfolio.git
+```
+
+Go to project folder:
+
+```bash
+cd laksh-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using Vercel.
+
+---
+
+## 📬 Contact
+
+- GitHub: https://github.com/Laksh25-code
+- LinkedIn: https://www.linkedin.com/in/laksh-patil-4b3136357
+- Portfolio: https://YOUR-VERCEL-LINK.vercel.app
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub.
