@@ -1,5 +1,5 @@
 import grainTexture from "../assets/grain-texture.png"
-import resumeFile from "../assets/resume/Laksh-Patil-Resume.pdf"
+import resumeFile from "../assets/resume/Laksh_Patil_Resume.pdf"
 
 import { motion } from "framer-motion"
 
