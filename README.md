@@ -6,7 +6,7 @@ Modern cinematic developer portfolio built using React, Tailwind CSS, Framer Mot
 
 ## 🌐 Live Demo
 
-🔗 https://YOUR-VERCEL-LINK.vercel.app
+🔗 https://laksh-portfolio-beryl.vercel.app/
 
 ---
 
