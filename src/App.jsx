@@ -5,6 +5,7 @@ import Journey from "./sections/Journey"
 import Contact from "./sections/Contact"
 import CustomCursor from "./components/CustomCursor"
 
+
 function App() {
   return (
     <>
