@@ -1,5 +1,4 @@
 import carHomepage from "../assets/web-projects/car-home.png"
-import carBooking from "../assets/web-projects/car-booking.png"
 import todoApp from "../assets/web-projects/todo-app.png"
 import tributePage from "../assets/web-projects/tribute-page.png"
 import calculator from "../assets/web-projects/calculator-app.png"
